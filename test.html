@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Index</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="drawer.css">
+  <script src="drawer.js"></script>
+
+  <script>
+    $(function () {
+      // dropdown
+      $("nav > div > ul, nav > ul + div").on({
+        "mouseenter focusin": function () {
+          $("#subCategory").add("nav > ul + div").stop().show();
+        },
+        "mouseleave focusout": function () {
+          $("#subCategory").add("nav > ul + div").stop().hide();
+        }
+      })
+
+      $("#footer").on({
+        "mouseenter focusin": function () {
+          setTimeout( function(){
+            $("#footer").animate({height:"200px"},200);
+          }  , 500 );
+        },
+        "mouseleave focusout": function () {
+          setTimeout( function(){
+            $("#footer").animate({height:"100px"},200);
+          }  , 500 );
+        }
+      });
+
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="nav navbar-collapse justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="#">로그인 </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">회원가입</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">고객센터</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="glyphicon glyphicon-shopping-cart" id="shoppingCart"></i> </a>
+        </li>
+      </ul>
+    </div>
+    <nav class="navbar navbar-expand-md">
+      <div class="col-xs-6 col-sm-4">
+        <img src="logo.jpg" style="margin-right:auto;" height="50px">
+      </div>
+      <div class="navbar-collapse collapse w-100 ml-auto col-xs-6 col-sm-4" id="collapsingNavbar3">
+        <ul class="navbar-nav w-100 justify-content-center">
+          <li class="nav-item active">
+            <a class="nav-link text-body font-weight-bold" href="#">&nbsp;</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-body font-weight-bold" href="#">수납</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-body font-weight-bold" href="#">생활</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-body font-weight-bold" href="#">데코</a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-collapse collapse col-sm-4">
+        <form class="navbar-form navbar-right" action="/action_page.php">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" name="search">
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="navbar-toggler text-right col-xs-6">
+        <button class="btn btn-default" type="submit">
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+        <button class="btn btn-default" type="submit" data-target="shoppingCart">
+          <i class="glyphicon glyphicon-shopping-cart"></i>
+        </button>
+        <button class="btn btn-default" type="button" data-toggle="drawer" data-target="#drawer-1" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="glyphicon glyphicon-menu-hamburger"></i>
+        </button>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-md position-absolute w-100" id="subCategory">
+      <div class="navbar-collapse collapse w-100 ml-auto col-xs-12 col-sm-12">
+        <ul class="navbar-nav w-100 justify-content-center">
+          <li class="nav-item active">
+            <a class="nav-link text-body" href="#">전체 상품</a>
+            <a class="nav-link text-body" href="#">NEW!</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link text-body" href="#">수납장</a>
+            <a class="nav-link text-body" href="#">쓰레기통</a>
+            <a class="nav-link text-body" href="#">분리수거함</a>
+            <a class="nav-link text-body" href="#">빨래바구니</a>
+            <a class="nav-link text-body" href="#">벽걸이선반</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-body" href="#">쇼파</a>
+            <a class="nav-link text-body" href="#">커튼</a>
+            <a class="nav-link text-body" href="#">거울</a>
+            <a class="nav-link text-body" href="#">시계</a>
+            <a class="nav-link text-body" href="#">행거</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-body" href="#">조명</a>
+            <a class="nav-link text-body" href="#">캔들</a>
+            <a class="nav-link text-body" href="#">드림캐쳐</a>
+            <a class="nav-link text-body" href="#">화분</a>
+            <a class="nav-link text-body" href="#">러그</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="drawer drawer-right slide" tabindex="-1" role="dialog" aria-labelledby="drawer-1-title" aria-hidden="true" id="drawer-1">
+    <div class="drawer-content drawer-content-scrollable" role="document">
+        <div class="drawer-header">
+            <h4 class="drawer-title" id="drawer-1-title">jQueryScript</h4>
+        </div>
+        <div class="drawer-body">
+            <p>Drawer body</p>
+            <img src="https://source.unsplash.com/200x100/?girl" style="width:100%; margin-bottom:2rem;">
+            <button type="button" class="btn btn-danger btn-block" data-dismiss="drawer" aria-label="Close">
+                Close
+            </button>
+        </div>
+        <div class="drawer-footer">Drawer footer</div>
+    </div>
+  </div>
+
+  <div class="text-center" style="margin-bottom: 50px;">
+    <img src="index1.jpg" class="img-fluid mx-auto d-block">
+    <figcaption class="card-overlay card_type_1">
+      <div class="card-overlay-content">
+        <p class="headline-md-marketing text-color-primary-dark bold">내 방을 위한 모든 것</p>
+        <h3>
+          asdfasdfasdf
+          <br>
+          dfasdfasdfadsf
+          <br>
+          adfadfadfasfasd
+        </h3>
+
+        <button style="border-radius:10px" type="button" class="btn btn-dark">구매하기</button>
+      </div>
+    </figcaption>
+  </div>
+  <div class="text-center" style="margin-bottom: 50px;">
+    <img src="index1.jpg" class="img-fluid mx-auto d-block">
+    <figcaption class="card-overlay card_type_1">
+      <div class="card-overlay-content">
+        <p class="headline-md-marketing text-color-primary-dark bold">내 방을 위한 모든 것</p>
+        <h3>
+          asdfasdfasdf
+          <br>
+          dfasdfasdfadsf
+          <br>
+          adfadfadfasfasd
+        </h3>
+
+        <button style="border-radius:10px" type="button" class="btn btn-dark">구매하기</button>
+      </div>
+    </figcaption>
+  </div>
+  <div class="text-center" style="">
+    <img src="index1.jpg" class="img-fluid mx-auto d-block">
+    <figcaption class="card-overlay card_type_1">
+      <div class="card-overlay-content">
+        <p class="headline-md-marketing text-color-primary-dark bold">내 방을 위한 모든 것</p>
+        <h3>
+          asdfasdfasdf
+          <br>
+          dfasdfasdfadsf
+          <br>
+          adfadfadfasfasd
+        </h3>
+
+        <button style="border-radius:10px" type="button" class="btn btn-dark">구매하기</button>
+      </div>
+    </figcaption>
+  </div>
+  <footer id="footer" class="bg-dark text-white">
+    <div class="accordion-body">
+      <ul>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+    </div>
+    <div class="accordion-body">
+      <ul>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+        <li class="footer-link">
+          <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+        </li>
+    </div>
+    <div class="accordion-body">
+        <ul>
+          <li class="footer-link">
+            <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+          </li>
+          <li class="footer-link">
+            <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+          </li>
+          <li class="footer-link">
+            <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+          </li>
+          <li class="footer-link">
+            <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+          </li>
+          <li class="footer-link">
+            <a href="https://store.nike.com/us/en_us/?l=shop%2Cgift_cards">GIFT CARDS</a>
+          </li>
+      </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+}
+
+.navbar-collapse>.nav-item>a {
+  color: grey
+}
+
+.nav,
+.navbar {
+  border-bottom: #eee 1px solid;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.navbar-collapse {
+  padding: 0
+}
+
+.text-body {
+  font-size: 1.2em;
+  margin: 5px 20px
+}
+
+.navbar-toggler>.btn-default {
+  border: none
+}
+
+/* 작은화면 버튼만 테두리 삭제 */
+/* header */
+
+.img-fluid {
+  width: 90%
+}
+
+.card_type_1 {
+  padding-left: 0;
+  text-align: center;
+  width: 100% !important;
+  padding-top: 24px;
+  padding-bottom: 100px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.headline-md-marketing {
+  font-size: 2em;
+}
+
+
+.text-color-primary-dark {
+  color: #111;
+}
+
+/* PC */
+@media only screen and (min-width: 1024px) {
+  .headline-md-marketing {
+    font-size: 49px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .headline-md-marketing {
+    font-size: 25px;
+    line-height: 1.15em;
+  }
+}
+
+.navbar-nav > li {
+  position: relative;
+}
+#subCategory {
+  display: none;
+}
+
+#subCategory li:first-child {
+  border-right: 1px solid black;
+}
+/* dropdown */
+nav > div > ul {
+  background: white;
+}
+nav > div > ul > li ul {
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 10001;
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  background: white;
+}
+
+.nav-item > ul li a {
+  padding: 5px 0;
+  font-weight: bold;
+  margin: 15px 0;
+  color: black;
+}
+
+/* nav > ul > li ul a:first-child {margin: 20px 0 0 0; padding: 20px 0 0 0;} */
+
+nav > ul + div {
+  background: #eee5e57c;
+  border-bottom: 1px solid#bbb;
+  height: 420px;
+  display: none;
+  position: absolute;
+  top:146px;
+  z-index: 10000;
+  margin: 0 0 0 230px;
+  width: 667px;
+}
+/* sidebar */
+
+
+/* footer */
+.jumbotron {margin-bottom: 0;}
+
+#footer {
+  height: 100px;
+  overflow: hidden;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.accordion-body {
+  display: inline-block;
+  width: 15%;
+}
+
+.accordion-body ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.accordion-body ul li {
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.accordion-body li a {
+  color: white;
+  font-weight: bold;
+}
