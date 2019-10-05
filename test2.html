@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Index</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <style>
+            html {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      position: relative;
+    }
+
+    .navbar-collapse>.nav-item>a {
+      color: grey
+    }
+
+    .nav,
+    .navbar {
+      border-bottom: #eee 1px solid;
+      margin-bottom: 0;
+      padding: 0;
+    }
+
+    .navbar-collapse {
+      padding: 0
+    }
+
+    .text-body {
+      font-size: 1.2em;
+      margin: 5px 20px
+    }
+
+    .navbar-toggler>.btn-default {
+      border: none
+    }
+
+    /* 작은화면 버튼만 테두리 삭제 */
+    /* header */
+
+    .img-fluid {
+      width: 90%
+    }
+
+    .card_type_1 {
+      padding-left: 0;
+      text-align: center;
+      width: 100% !important;
+      padding-top: 24px;
+      padding-bottom: 100px;
+    }
+
+    .bold {
+      font-weight: 700;
+    }
+
+    .headline-md-marketing {
+      font-size: 2em;
+    }
+
+
+    .text-color-primary-dark {
+      color: #111;
+    }
+
+    /* PC */
+    @media only screen and (min-width: 1024px) {
+      .headline-md-marketing {
+        font-size: 49px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+
+    @media only screen and (max-width: 640px) {
+      .headline-md-marketing {
+        font-size: 25px;
+        line-height: 1.15em;
+      }
+
+    }
+
+
+    .navbar-nav > li {
+      position: relative;
+    }
+
+    #collapsingNavbar3:hover {
+      cursor: pointer;
+    }
+
+    #subCategory {
+      display: none;
+      background: white;
+    }
+
+    #subCategory li:first-child {
+      border-right: 1px solid #bbb;
+    }
+    /* dropdown */
+   /*  nav > div > ul {
+      background: white;
+    } */
+    nav > div > ul > li ul {
+      width: 100%;
+      position: absolute;
+      z-index: 10001;
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+      color: black;
+      font-size: 1em;
+      display: none; }
+    }
+
+    .nav-item > ul li a {
+      padding: 5px 0;
+      font-weight: bold;
+      margin: 15px 0;
+      color: black;
+    }
+
+    /* nav > ul > li ul a:first-child {margin: 20px 0 0 0; padding: 20px 0 0 0;} */
+
+    nav > ul + div {
+      background: #eee5e57c;
+      border-bottom: 1px solid #bbb;
+      height: 420px;
+      display: none;
+      position: absolute;
+      top:146px;
+      z-index: 10000;
+      margin: 0 0 0 230px;
+      width: 667px;
+    }
+    /* sidebar */
+    /*!
+    * Bootstrap Drawer v4.0.0 (https://iqbalfn.github.io/bootstrap-drawer/)
+    * Copyright 2019 Iqbal Fauzi
+    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+    */
+   .drawer-open {
+       overflow: hidden
+   }
+
+   .drawer {
+       position: fixed;
+       width: 320px;
+       top: 0;
+       z-index: 1050;
+       height: 100vh;
+       display: none
+   }
+
+   .drawer.drawer-right {
+       right: -320px;
+       border-left: 1px solid rgba(0, 0, 0, .2)
+   }
+
+   .drawer.drawer-left {
+       left: -320px;
+       border-right: 1px solid rgba(0, 0, 0, .2)
+   }
+
+   .drawer.show {
+       -webkit-transform: none;
+       transform: none
+   }
+
+   .drawer.show.drawer-right {
+       right: 0
+   }
+
+   .drawer.show.drawer-left {
+       left: 0
+   }
+
+   .drawer.slide {
+       transition: left .2s ease, right .2s ease
+   }
+
+   @media (prefers-reduced-motion:reduce) {
+       .drawer.slide {
+           transition: none
+       }
+   }
+
+   .drawer-backdrop {
+       position: fixed;
+       top: 0;
+       left: 0;
+       z-index: 1040;
+       width: 100vw;
+       height: 100vh;
+       background-color: #000
+   }
+
+   .drawer-backdrop.fade {
+       opacity: 0
+   }
+
+   .drawer-backdrop.show {
+       opacity: .5
+   }
+
+   .drawer-body {
+       padding: 1rem 1rem
+   }
+
+   .drawer-content {
+       width: 100%;
+       pointer-events: auto;
+       background-color: #fff;
+       background-clip: padding-box;
+       outline: 0;
+       height: 100%;
+       overflow-y: auto
+   }
+
+   .drawer-content.drawer-content-scrollable {
+       display: flex;
+       flex-direction: column
+   }
+
+   .drawer-content.drawer-content-scrollable>div {
+       display: flex;
+       flex-direction: column
+   }
+
+   .drawer-content.drawer-content-scrollable>div.drawer-body {
+       flex: 1;
+       overflow-y: auto
+   }
+
+   .drawer-header {
+       padding: 1rem 1rem;
+       border-bottom: 1px solid #dee2e6
+   }
+
+   .drawer-footer {
+       padding: 1rem;
+       border-top: 1px solid #dee2e6
+   }
+
+   .drawer-title {
+       margin-bottom: 0;
+       line-height: 1.5
+   }
+
+   .drawer-scrollbar-measure {
+       position: absolute;
+       top: -9999px;
+       width: 50px;
+       height: 50px;
+       overflow: scroll
+   }
+
+   /*# sourceMappingURL=bootstrap-drawer.min.css.map */
+
+    /* footer */
+
+
+    #footer {
+      margin-bottom: 0;
+      overflow: hidden;
+      padding: 20px;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+
+   /*  #text {
+       text-align: center;
+    } */
+    .p-2 {
+       text-align: center;
+    }
+    .footer-link {
+      list-style: none;
+      text-decoration: none;
+      line-height: 2em;
+    }
+
+    .d-flex {
+       color: #747474;
+   }
+
+    @media (max-width: 960px){
+      .uk-width-medium-4-8,
+      .uk-width-medium-3-8 {
+          padding: 20px 35px;
+          color: #747474;
+          font-size: 12px;
+      }
+    }
+    @media (min-width: 768px) {}
+   .uk-width-medium-4-8 {
+       width: 50%;
+   }
+
+   .border-none {border: none;}
+   .plain-text {color: #333;}
+   .plain-text:hover {text-decoration: none;}
+   .icon {width: 16px; height: 16px; margin: 0 5px; vertical-align: bottom;}
+   .list-item:hover {transform: scale(1.05); transition: all 0.3s ease-in-out}
+   .list-item .img-fluid, .view-item .img-fluid {width: 100%;}
+   .view-content {font-size: 1.2em;}
+   .view-content * {padding-bottom: 5px; padding-top: 5px; margin-bottom: 20px;}
+   .gray {color: gray;}
+   .glyphicon {margin: 0;}
+
+    </style>
+    <!-- <script src="/js/script.js"></script> -->
+    <script>
+        $(function () {
+            // dropdown
+            $("#collapsingNavbar3, #subCategory").on({
+                "mouseenter focusin": function () {
+                  console.log("?")
+                    $("#subCategory").add("nav > ul + div").stop().show();
+                },
+                "mouseleave focusout": function () {
+                    $("#subCategory").add("nav > ul + div").stop().hide();
+                }
+            });
+
+        });
+
+        /*sidebar(drawer)*/
+        /*!
+         * Bootstrap v4.3.1-admin-ui (https://getbootstrap.com/)
+         * Copyright 2011-2019 The Bootstrap Authors Author And MIM Dev
+         * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+         */
+        ! function (e, t) {
+            "object" == typeof exports && "undefined" != typeof module ? t(exports, require("jquery")) : "function" ==
+                typeof define && define.amd ? define(["exports", "jquery"], t) : t((e = e || self)[
+                "bootstrap-drawer"] = {}, e.jQuery)
+        }(this, function (e, s) {
+            "use strict";
+
+            function i(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0),
+                        Object.defineProperty(e, i.key, i)
+                }
+            }
+
+            function a(o) {
+                for (var e = 1; e < arguments.length; e++) {
+                    var r = null != arguments[e] ? arguments[e] : {},
+                        t = Object.keys(r);
+                    "function" == typeof Object.getOwnPropertySymbols && (t = t.concat(Object.getOwnPropertySymbols(
+                        r).filter(function (e) {
+                        return Object.getOwnPropertyDescriptor(r, e).enumerable
+                    }))), t.forEach(function (e) {
+                        var t, n, i;
+                        t = o, i = r[n = e], n in t ? Object.defineProperty(t, n, {
+                            value: i,
+                            enumerable: !0,
+                            configurable: !0,
+                            writable: !0
+                        }) : t[n] = i
+                    })
+                }
+                return o
+            }
+            s = s && s.hasOwnProperty("default") ? s.default : s;
+            var t = "transitionend";
+
+            function n(e) {
+                var t = this,
+                    n = !1;
+                return s(this).one(l.TRANSITION_END, function () {
+                    n = !0
+                }), setTimeout(function () {
+                    n || l.triggerTransitionEnd(t)
+                }, e), this
+            }
+            var l = {
+                TRANSITION_END: "bsTransitionEnd",
+                getUID: function (e) {
+                    for (; e += ~~(1e6 * Math.random()), document.getElementById(e););
+                    return e
+                },
+                getSelectorFromElement: function (e) {
+                    var t = e.getAttribute("data-target");
+                    if (!t || "#" === t) {
+                        var n = e.getAttribute("href");
+                        t = n && "#" !== n ? n.trim() : ""
+                    }
+                    try {
+                        return document.querySelector(t) ? t : null
+                    } catch (e) {
+                        return null
+                    }
+                },
+                getTransitionDurationFromElement: function (e) {
+                    if (!e) return 0;
+                    var t = s(e).css("transition-duration"),
+                        n = s(e).css("transition-delay"),
+                        i = parseFloat(t),
+                        o = parseFloat(n);
+                    return i || o ? (t = t.split(",")[0], n = n.split(",")[0], 1e3 * (parseFloat(t) +
+                        parseFloat(n))) : 0
+                },
+                reflow: function (e) {
+                    return e.offsetHeight
+                },
+                triggerTransitionEnd: function (e) {
+                    s(e).trigger(t)
+                },
+                supportsTransitionEnd: function () {
+                    return Boolean(t)
+                },
+                isElement: function (e) {
+                    return (e[0] || e).nodeType
+                },
+                typeCheckConfig: function (e, t, n) {
+                    for (var i in n)
+                        if (Object.prototype.hasOwnProperty.call(n, i)) {
+                            var o = n[i],
+                                r = t[i],
+                                s = r && l.isElement(r) ? "element" : (a = r, {}.toString.call(a).match(
+                                    /\s([a-z]+)/i)[1].toLowerCase());
+                            if (!new RegExp(o).test(s)) throw new Error(e.toUpperCase() + ': Option "' + i +
+                                '" provided type "' + s + '" but expected type "' + o + '".')
+                        } var a
+                },
+                findShadowRoot: function (e) {
+                    if (!document.documentElement.attachShadow) return null;
+                    if ("function" != typeof e.getRootNode) return e instanceof ShadowRoot ? e : e
+                        .parentNode ? l.findShadowRoot(e.parentNode) : null;
+                    var t = e.getRootNode();
+                    return t instanceof ShadowRoot ? t : null
+                }
+            };
+            s.fn.emulateTransitionEnd = n, s.event.special[l.TRANSITION_END] = {
+                bindType: t,
+                delegateType: t,
+                handle: function (e) {
+                    if (s(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+                }
+            };
+            var r = "drawer",
+                c = "bs.drawer",
+                d = "." + c,
+                o = s.fn[r],
+                h = {
+                    backdrop: !0,
+                    keyboard: !0,
+                    focus: !0,
+                    show: !0
+                },
+                u = {
+                    backdrop: "(boolean|string)",
+                    keyboard: "boolean",
+                    focus: "boolean",
+                    show: "boolean"
+                },
+                f = {
+                    HIDE: "hide" + d,
+                    HIDDEN: "hidden" + d,
+                    SHOW: "show" + d,
+                    SHOWN: "shown" + d,
+                    FOCUSIN: "focusin" + d,
+                    RESIZE: "resize" + d,
+                    CLICK_DISMISS: "click.dismiss" + d,
+                    KEYDOWN_DISMISS: "keydown.dismiss" + d,
+                    MOUSEUP_DISMISS: "mouseup.dismiss" + d,
+                    MOUSEDOWN_DISMISS: "mousedown.dismiss" + d,
+                    CLICK_DATA_API: "click" + d + ".data-api"
+                },
+                _ = "drawer-content-scrollable",
+                m = "drawer-scrollbar-measure",
+                g = "drawer-backdrop",
+                p = "slide",
+                S = "fade",
+                b = "show",
+                y = "drawer-open",
+                v = ".drawer-content",
+                w = ".drawer-body",
+                E = '[data-toggle="drawer"]',
+                I = '[data-dismiss="drawer"]',
+                D = ".fixed-top, .fixed-bottom, .is-fixed, .sticky-top",
+                k = ".sticky-top",
+                N = function () {
+                    function o(e, t) {
+                        this._config = this._getConfig(t), this._element = e, this._content = e.querySelector(v),
+                            this._backdrop = null, this._isShown = !1, this._isBodyOverflowing = !1, this
+                            ._ignoreBackdropClick = !1, this._isTransitioning = !1, this._scrollbarWidth = 0
+                    }
+                    var e = o.prototype;
+                    return e.toggle = function (e) {
+                            return this._isShown ? this.hide() : this.show(e)
+                        }, e.show = function (e) {
+                            var t = this;
+                            if (!this._isShown && !this._isTransitioning) {
+                                s(this._element).hasClass(p) && (this._isTransitioning = !0);
+                                var n = s.Event(f.SHOW, {
+                                    relatedTarget: e
+                                });
+                                s(this._element).trigger(n), this._isShown || n.isDefaultPrevented() || (this
+                                    ._isShown = !0, this._checkScrollbar(), this._setScrollbar(), this
+                                    ._setEscapeEvent(), s(this._element).on(f.CLICK_DISMISS, I, function (e) {
+                                        return t.hide(e)
+                                    }), s(this._content).on(f.MOUSEDOWN_DISMISS, function () {
+                                        s(t._element).one(f.MOUSEUP_DISMISS, function (e) {
+                                            s(e.target).is(t._element) && (t
+                                                ._ignoreBackdropClick = !0)
+                                        })
+                                    }), this._showBackdrop(function () {
+                                        return t._showElement(e)
+                                    }))
+                            }
+                        }, e.hide = function (e) {
+                            var t = this;
+                            if (e && e.preventDefault(), this._isShown && !this._isTransitioning) {
+                                var n = s.Event(f.HIDE);
+                                if (s(this._element).trigger(n), this._isShown && !n.isDefaultPrevented()) {
+                                    this._isShown = !1;
+                                    var i = s(this._element).hasClass(p);
+                                    if (i && (this._isTransitioning = !0), this._setEscapeEvent(), s(document).off(f
+                                            .FOCUSIN), s(this._element).removeClass(b), s(this._element).off(f
+                                            .CLICK_DISMISS), s(this._content).off(f.MOUSEDOWN_DISMISS), i) {
+                                        var o = l.getTransitionDurationFromElement(this._element);
+                                        s(this._element).one(l.TRANSITION_END, function (e) {
+                                            return t._hideDrawer(e)
+                                        }).emulateTransitionEnd(o)
+                                    } else this._hideDrawer()
+                                }
+                            }
+                        }, e.dispose = function () {
+                            [window, this._element, this._content].forEach(function (e) {
+                                    return s(e).off(d)
+                                }), s(document).off(f.FOCUSIN), s.removeData(this._element, c), this._config = null,
+                                this._element = null, this._content = null, this._backdrop = null, this._isShown =
+                                null, this._isBodyOverflowing = null, this._ignoreBackdropClick = null, this
+                                ._isTransitioning = null, this._scrollbarWidth = null
+                        }, e._getConfig = function (e) {
+                            return e = a({}, h, e), l.typeCheckConfig(r, e, u), e
+                        }, e._showElement = function (e) {
+                            var t = this,
+                                n = s(this._element).hasClass(p);
+                            this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE ||
+                                document.body.appendChild(this._element), this._element.style.display = "block",
+                                this._element.removeAttribute("aria-hidden"), this._element.setAttribute(
+                                    "aria-modal", !0), s(this._content).hasClass(_) ? this._content.querySelector(w)
+                                .scrollTop = 0 : this._element.scrollTop = 0, n && l.reflow(this._element), s(this
+                                    ._element).addClass(b), this._config.focus && this._enforceFocus();
+
+                            function i() {
+                                t._config.focus && t._element.focus(), t._isTransitioning = !1, s(t._element)
+                                    .trigger(o)
+                            }
+                            var o = s.Event(f.SHOWN, {
+                                relatedTarget: e
+                            });
+                            if (n) {
+                                var r = l.getTransitionDurationFromElement(this._element);
+                                s(this._element).one(l.TRANSITION_END, i).emulateTransitionEnd(r)
+                            } else i()
+                        }, e._enforceFocus = function () {
+                            var t = this;
+                            s(document).off(f.FOCUSIN).on(f.FOCUSIN, function (e) {
+                                document !== e.target && t._element !== e.target && 0 === s(t._element).has(
+                                    e.target).length && t._element.focus()
+                            })
+                        }, e._setEscapeEvent = function () {
+                            var t = this;
+                            this._isShown && this._config.keyboard ? s(document.body).on(f.KEYDOWN_DISMISS,
+                                function (e) {
+                                    27 === e.which && (e.preventDefault(), t.hide())
+                                }) : this._isShown || s(document.body).off(f.KEYDOWN_DISMISS)
+                        }, e._hideDrawer = function () {
+                            var e = this;
+                            this._element.style.display = "none", this._element.setAttribute("aria-hidden", !0),
+                                this._element.removeAttribute("aria-modal"), this._isTransitioning = !1, this
+                                ._showBackdrop(function () {
+                                    s(document.body).removeClass(y), e._resetAdjustments(), e._resetScrollbar(),
+                                        s(e._element).trigger(f.HIDDEN)
+                                })
+                        }, e._removeBackdrop = function () {
+                            this._backdrop && (s(this._backdrop).remove(), this._backdrop = null)
+                        }, e._showBackdrop = function (e) {
+                            var t = this,
+                                n = s(this._element).hasClass(p) ? S : "";
+                            if (this._isShown && this._config.backdrop) {
+                                if (this._backdrop = document.createElement("div"), this._backdrop.className = g,
+                                    n && this._backdrop.classList.add(n), s(this._backdrop).appendTo(document.body),
+                                    s(this._backdrop).on(f.CLICK_DISMISS, function (e) {
+                                        t._ignoreBackdropClick ? t._ignoreBackdropClick = !1 : e.target === e
+                                            .currentTarget && ("static" === t._config.backdrop ? t._element
+                                                .focus() : t.hide())
+                                    }), n && l.reflow(this._backdrop), s(this._backdrop).addClass(b), !e) return;
+                                if (!n) return e();
+                                var i = l.getTransitionDurationFromElement(this._backdrop);
+                                s(this._backdrop).one(l.TRANSITION_END, e).emulateTransitionEnd(i)
+                            } else if (!this._isShown && this._backdrop) {
+                                s(this._backdrop).removeClass(b);
+                                var o = function () {
+                                    t._removeBackdrop(), e && e()
+                                };
+                                if (s(this._element).hasClass(p)) {
+                                    var r = l.getTransitionDurationFromElement(this._backdrop);
+                                    s(this._backdrop).one(l.TRANSITION_END, o).emulateTransitionEnd(r)
+                                } else o()
+                            } else e && e()
+                        }, e._resetAdjustments = function () {
+                            this._element.style.paddingLeft = "", this._element.style.paddingRight = ""
+                        }, e._checkScrollbar = function () {
+                            var e = document.body.getBoundingClientRect();
+                            this._isBodyOverflowing = e.left + e.right < window.innerWidth, this._scrollbarWidth =
+                                this._getScrollbarWidth()
+                        }, e._setScrollbar = function () {
+                            var o = this;
+                            if (this._isBodyOverflowing) {
+                                var e = [].slice.call(document.querySelectorAll(D)),
+                                    t = [].slice.call(document.querySelectorAll(k));
+                                s(e).each(function (e, t) {
+                                    var n = t.style.paddingRight,
+                                        i = s(t).css("padding-right");
+                                    s(t).data("padding-right", n).css("padding-right", parseFloat(i) + o
+                                        ._scrollbarWidth + "px")
+                                }), s(t).each(function (e, t) {
+                                    var n = t.style.marginRight,
+                                        i = s(t).css("margin-right");
+                                    s(t).data("margin-right", n).css("margin-right", parseFloat(i) - o
+                                        ._scrollbarWidth + "px")
+                                });
+                                var n = document.body.style.paddingRight,
+                                    i = s(document.body).css("padding-right");
+                                s(document.body).data("padding-right", n).css("padding-right", parseFloat(i) + this
+                                    ._scrollbarWidth + "px")
+                            }
+                            s(document.body).addClass(y)
+                        }, e._resetScrollbar = function () {
+                            var e = [].slice.call(document.querySelectorAll(D));
+                            s(e).each(function (e, t) {
+                                var n = s(t).data("padding-right");
+                                s(t).removeData("padding-right"), t.style.paddingRight = n || ""
+                            });
+                            var t = [].slice.call(document.querySelectorAll("" + k));
+                            s(t).each(function (e, t) {
+                                var n = s(t).data("margin-right");
+                                "undefined" != typeof n && s(t).css("margin-right", n).removeData(
+                                    "margin-right")
+                            });
+                            var n = s(document.body).data("padding-right");
+                            s(document.body).removeData("padding-right"), document.body.style.paddingRight = n || ""
+                        }, e._getScrollbarWidth = function () {
+                            var e = document.createElement("div");
+                            e.className = m, document.body.appendChild(e);
+                            var t = e.getBoundingClientRect().width - e.clientWidth;
+                            return document.body.removeChild(e), t
+                        }, o._jQueryInterface = function (n, i) {
+                            return this.each(function () {
+                                var e = s(this).data(c),
+                                    t = a({}, h, s(this).data(), "object" == typeof n && n ? n : {});
+                                if (e || (e = new o(this, t), s(this).data(c, e)), "string" == typeof n) {
+                                    if ("undefined" == typeof e[n]) throw new TypeError(
+                                        'No method named "' + n + '"');
+                                    e[n](i)
+                                } else t.show && e.show(i)
+                            })
+                        },
+                        function (e, t, n) {
+                            t && i(e.prototype, t), n && i(e, n)
+                        }(o, null, [{
+                            key: "VERSION",
+                            get: function () {
+                                return "0.0.1"
+                            }
+                        }, {
+                            key: "Default",
+                            get: function () {
+                                return h
+                            }
+                        }]), o
+                }();
+            s(document).on(f.CLICK_DATA_API, E, function (e) {
+                var t, n = this,
+                    i = l.getSelectorFromElement(this);
+                i && (t = document.querySelector(i));
+                var o = s(t).data(c) ? "toggle" : a({}, s(t).data(), s(this).data());
+                "A" !== this.tagName && "AREA" !== this.tagName || e.preventDefault();
+                var r = s(t).one(f.SHOW, function (e) {
+                    e.isDefaultPrevented() || r.one(f.HIDDEN, function () {
+                        s(n).is(":visible") && n.focus()
+                    })
+                });
+                N._jQueryInterface.call(s(t), o, this)
+            }), s.fn[r] = N._jQueryInterface, s.fn[r].Constructor = N, s.fn[r].noConflict = function () {
+                return s.fn[r] = o, N._jQueryInterface
+            }, e.Drawer = N, Object.defineProperty(e, "__esModule", {
+                value: !0
+            })
+        });
+        //# sourceMappingURL=bootstrap-drawer.min.js.map
+    </script>
+</head>
+
+<!-- Drawer -->
+<div class="drawer drawer-right slide" tabindex="-1" role="dialog" aria-labelledby="drawer-1-title" aria-hidden="true"
+    id="drawer-1">
+    <div class="drawer-content drawer-content-scrollable" role="document">
+        <div class="drawer-header">
+            <h4 class="drawer-title" id="drawer-1-title">IDEA 둘러보기</h4>
+        </div>
+        <div class="drawer-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <a class="" href="#">로그인 </a>
+                </li>
+                <li class="list-group-item">
+                    <a class="" href="#">회원가입</a>
+                </li>
+                <li class="list-group-item">
+                    <a class="" href="#">수납</a>
+                </li>
+                <li class="list-group-item">
+                    <a class="" href="#">생활</a>
+                </li>
+                <li class="list-group-item">
+                    <a class="" href="#">데코</a>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-danger btn-block" data-dismiss="drawer" aria-label="Close">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+<!-- Drawer -->
+
+<body>
+    <header>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="nav navbar-collapse justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">로그인 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">회원가입</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">고객센터</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="glyphicon glyphicon-shopping-cart" id="shoppingCart"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="navbar navbar-expand-md">
+            <div class="col-xs-6 col-sm-4">
+                <img src="logo.jpg" style="margin-right:auto;" height="50px">
+            </div>
+            <div class="navbar-collapse collapse w-100 ml-auto col-xs-6 col-sm-4" id="collapsingNavbar3">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item active">
+                        <a class="nav-link text-body font-weight-bold" href="#" tabindex="-1">&nbsp;</a>
+                        <!-- <ul class="navbar-nav w-100 justify-content-center">
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">전체 상품</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">NEW!</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-body font-weight-bold" href="#">수납</a>
+                        <!-- <ul class="navbar-nav w-100 justify-content-center">
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">수납장</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">쓰레기통</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">분리수거함</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">빨래바구니</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">벽걸이선반</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-body font-weight-bold" href="#">생활</a>
+                        <!-- <ul class="navbar-nav w-100 justify-content-center">
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">쇼파</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">커튼</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">거울</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">시계</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">행거</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-body font-weight-bold" href="#">데코</a>
+                        <!-- <ul class="navbar-nav w-100 justify-content-center">
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">조명</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">캔들</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">드림캐쳐</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">화분</a></li>
+                            <li class="nav-item active"><a class="nav-link text-body" href="#">러그</a></li>
+                        </ul> -->
+                    </li>
+                </ul>
+            </div>
+            <div class="navbar-collapse collapse col-sm-4">
+                <form class="navbar-form navbar-right" action="/action_page.php">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="search">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="navbar-toggler text-right col-xs-6">
+                <button class="btn btn-default" type="submit">
+                    <i class="glyphicon glyphicon-search"></i>
+                </button>
+                <button class="btn btn-default" type="submit" data-target="shoppingCart">
+                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                </button>
+                <button class="btn btn-default" type="button" data-toggle="drawer" data-target="#drawer-1"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="glyphicon glyphicon-menu-hamburger"></i>
+                </button>
+            </div>
+        </nav>
+
+        <nav class="navbar navbar-expand-md position-absolute w-100" id="subCategory">
+          <div class="navbar-collapse collapse w-100 ml-auto col-xs-12 col-sm-12">
+            <ul class="navbar-nav w-100 justify-content-center">
+              <li class="nav-item active">
+                <a class="nav-link text-body" href="#">전체 상품</a>
+                <a class="nav-link text-body" href="#">NEW!</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-body" href="#">수납장</a>
+                <a class="nav-link text-body" href="#">쓰레기통</a>
+                <a class="nav-link text-body" href="#">분리수거함</a>
+                <a class="nav-link text-body" href="#">빨래바구니</a>
+                <a class="nav-link text-body" href="#">벽걸이선반</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#">쇼파</a>
+                <a class="nav-link text-body" href="#">커튼</a>
+                <a class="nav-link text-body" href="#">거울</a>
+                <a class="nav-link text-body" href="#">시계</a>
+                <a class="nav-link text-body" href="#">행거</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-body" href="#">조명</a>
+                <a class="nav-link text-body" href="#">캔들</a>
+                <a class="nav-link text-body" href="#">드림캐쳐</a>
+                <a class="nav-link text-body" href="#">화분</a>
+                <a class="nav-link text-body" href="#">러그</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <jsp:include page="../common/header.jsp" />
+    <div class="text-center" style="margin-bottom: 50px;">
+        <img src="index1.jpg" class="img-fluid mx-auto d-block">
+        <figcaption class="card-overlay card_type_1">
+            <div class="card-overlay-content">
+                <p class="headline-md-marketing text-color-primary-dark bold">내 방을 위한 모든 것</p>
+                <h3>
+                    asdfasdfasdf
+                    <br>
+                    dfasdfasdfadsf
+                    <br>
+                    adfadfadfasfasd
+                </h3>
+
+                <button style="border-radius:10px" type="button" class="btn btn-dark">구매하기</button>
+            </div>
+        </figcaption>
+    </div>
+    <div class="text-center" style="margin-bottom: 50px;">
+        <img src="index1.jpg" class="img-fluid mx-auto d-block">
+        <figcaption class="card-overlay card_type_1">
+            <div class="card-overlay-content">
+                <p class="headline-md-marketing text-color-primary-dark bold">내 방을 위한 모든 것</p>
+                <h3>
+                    asdfasdfasdf
+                    <br>
+                    dfasdfasdfadsf
+                    <br>
+                    adfadfadfasfasd
+                </h3>
+
+                <button style="border-radius:10px" type="button" class="btn btn-dark">구매하기</button>
+            </div>
+        </figcaption>
+    </div>
+    <div class="text-center" style="margin-bottom: 50px;">
+        <img src="index1.jpg" class="img-fluid mx-auto d-block">
+        <figcaption class="card-overlay card_type_1">
+            <div class="card-overlay-content">
+                <p class="headline-md-marketing text-color-primary-dark bold">내 방을 위한 모든 것</p>
+                <h3>
+                    asdfasdfasdf
+                    <br>
+                    dfasdfasdfadsf
+                    <br>
+                    adfadfadfasfasd
+                </h3>
+
+                <button style="border-radius:10px" type="button" class="btn btn-dark">구매하기</button>
+            </div>
+        </figcaption>
+    </div>
+
+    <jsp:include page="../common/footer.jsp" />
+</body>
+
+</html>
