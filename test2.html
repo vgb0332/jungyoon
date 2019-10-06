@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <style>
-            html {
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+    html {
       height: 100%;
     }
 
@@ -29,6 +31,10 @@
       position: relative;
     }
 
+    html, body {
+      font-family: 'Noto Sans KR', sans-serif !important;
+    }
+    
     .navbar-collapse>.nav-item>a {
       color: grey
     }
@@ -93,6 +99,22 @@
         padding-right: 0;
         padding-left: 0;
         text-align: center;
+        margin: 0;
+      }
+
+      #collapsingNavbar3 > .navbar-nav {
+        min-width: 100px;
+      }
+
+      #collapsingNavbar3 > .navbar-nav > .nav-item > .navbar-nav  {
+        min-width: 100px;
+        flex-direction: column;
+        background-color: #fff;
+        margin-top: 5px;
+      }
+
+      .navbar-expand-md .navbar-nav .nav-link:first-child {
+
       }
     }
 
@@ -107,6 +129,7 @@
 
     .navbar-nav > li {
       position: relative;
+      min-width: 100px;
     }
 
     #collapsingNavbar3:hover {
@@ -785,40 +808,40 @@
                 <ul class="navbar-nav w-100 justify-content-center">
                     <li class="nav-item active">
                         <a class="nav-link text-body font-weight-bold" href="#" tabindex="-1">&nbsp;</a>
-                        <!-- <ul class="navbar-nav w-100 justify-content-center">
+                        <ul class="navbar-nav w-100 justify-content-center">
                             <li class="nav-item active"><a class="nav-link text-body" href="#">전체 상품</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">NEW!</a></li>
-                        </ul> -->
+                        </ul>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link text-body font-weight-bold" href="#">수납</a>
-                        <!-- <ul class="navbar-nav w-100 justify-content-center">
+                        <ul class="navbar-nav w-100 justify-content-center">
                             <li class="nav-item active"><a class="nav-link text-body" href="#">수납장</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">쓰레기통</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">분리수거함</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">빨래바구니</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">벽걸이선반</a></li>
-                        </ul> -->
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-body font-weight-bold" href="#">생활</a>
-                        <!-- <ul class="navbar-nav w-100 justify-content-center">
+                        <ul class="navbar-nav w-100 justify-content-center">
                             <li class="nav-item active"><a class="nav-link text-body" href="#">쇼파</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">커튼</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">거울</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">시계</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">행거</a></li>
-                        </ul> -->
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-body font-weight-bold" href="#">데코</a>
-                        <!-- <ul class="navbar-nav w-100 justify-content-center">
+                        <ul class="navbar-nav w-100 justify-content-center">
                             <li class="nav-item active"><a class="nav-link text-body" href="#">조명</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">캔들</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">드림캐쳐</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">화분</a></li>
                             <li class="nav-item active"><a class="nav-link text-body" href="#">러그</a></li>
-                        </ul> -->
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -848,16 +871,16 @@
                 </button>
             </div>
         </nav>
-
+<!--
         <nav class="navbar navbar-expand-md position-absolute w-100" id="subCategory">
           <div class="navbar-collapse collapse w-100 ml-auto col-xs-12 col-sm-12">
             <ul class="navbar-nav w-100 justify-content-center">
               <li class="nav-item active">
-                <a class="nav-link text-body" href="#">전체 상품</a>
-                <a class="nav-link text-body" href="#">NEW!</a>
+                <a class="nav-link text-body" href="#" tabindex="1">전체 상품</a>
+                `<a class="nav-link text-body" href="#" tabindex="3">NEW!</a>`
               </li>
               <li class="nav-item active">
-                <a class="nav-link text-body" href="#">수납장</a>
+                <a class="nav-link text-body" href="#" tabindex="2">수납장</a>
                 <a class="nav-link text-body" href="#">쓰레기통</a>
                 <a class="nav-link text-body" href="#">분리수거함</a>
                 <a class="nav-link text-body" href="#">빨래바구니</a>
@@ -879,7 +902,7 @@
               </li>
             </ul>
           </div>
-        </nav>
+        </nav> -->
     </header>
     <jsp:include page="../common/header.jsp" />
     <div class="text-center" style="margin-bottom: 50px;">
